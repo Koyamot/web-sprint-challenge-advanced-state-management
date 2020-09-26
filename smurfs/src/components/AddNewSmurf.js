@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { connect } from "react-redux";
-import { addNewSmurf } from "../actions/action"
+import { addNewSmurf } from "../actions"
 
 const AddNewSmurf = (props) => {
     const [smurf, setSmurf] = useState({
@@ -26,15 +26,17 @@ const AddNewSmurf = (props) => {
           <div className="newSmurf-container">
               <form onSubmit={handleNewSmurf}>
             <label htmlFor="name">
+              Name: 
             <input
               type="text"
               name="name"
               value={smurf.name}
               onChange={handleChanges}
-              placeholder="Add new member"
+              placeholder="Add new smurf"
             />
             </label>
             <label htmlFor="age">
+              Age: 
             <input
               type="text"
               name="age"
@@ -44,6 +46,7 @@ const AddNewSmurf = (props) => {
             />
             </label>
             <label htmlFor="height">
+              Height: 
             <input
               type="text"
               name="height"

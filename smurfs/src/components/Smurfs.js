@@ -1,6 +1,7 @@
 import React from "react";
 
 const Smurfs = props => {
+    
     return(
         <div>
         <h2>Name: {props.smurf.name}</h2>
@@ -10,4 +11,4 @@ const Smurfs = props => {
     )
 }
 
-export default Smurf;
+export default Smurfs;

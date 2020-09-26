@@ -1,4 +1,4 @@
-import { FETCH_SMURF_DATA, FETCH_SMURF_DATA_FAILURE, FETCH_SMURF_DATA_SUCCESS, ADD_NEW_SMURF, ADD_NEW_SMURF_FAILURE, ADD_NEW_SMURF_SUCCESS } from '../actions/action'
+import { FETCH_SMURF_DATA, FETCH_SMURF_DATA_FAILURE, FETCH_SMURF_DATA_SUCCESS, POST_DATA, POST_ERROR, POST_SUCCESS } from '../actions'
 
 const initialState = {
     smurfs: [],
@@ -11,7 +11,7 @@ export const smurfReducer = (state=initialState, action) => {
     switch(action.type){
         case FETCH_SMURF_DATA:
             const addSmurf = [
-                
+
             ]
             return{
                 ...state,
@@ -30,20 +30,20 @@ export const smurfReducer = (state=initialState, action) => {
                 isLoading: false,
                 error: action.payload                
             }
-        case ADD_NEW_SMURF:
+        case POST_DATA:
             return{
                 ...state,
                 isLoading: true,
                 smurfs: [...state.smurfs]
             }
 
-        case ADD_NEW_SMURF_SUCCESS:
+        case POST_SUCCESS:
                 return{
                     ...state,
                     isPosting: true,
                     smurfs: action.payload
                 }
-        case ADD_NEW_SMURF_FAIL:
+        case POST_ERROR:
             return{
                 ...state,
                 isPosting: false,
