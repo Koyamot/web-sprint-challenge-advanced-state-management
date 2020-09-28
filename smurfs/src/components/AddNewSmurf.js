@@ -28,7 +28,7 @@ const AddNewSmurf = (props) => {
       };
     
         return (
-          <div className="newSmurf-container">
+          <div className="addSmurf-container">
               <form onSubmit={handleNewSmurf}>
             <label htmlFor="name">
               Name: 

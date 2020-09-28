@@ -1,8 +1,12 @@
 .App {
   text-align: center;
+  background: lightblue;
+  padding-top: 24px;
 }
 
 form {
+  width: 300px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -22,6 +26,10 @@ button{
   margin-top: 16px;
 }
 
+h1 {
+  margin-top: 0;
+}
+
 .smurfCard {
   width: 150px;
   height: 150px;
@@ -37,6 +45,15 @@ button{
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.addSmurf-container {
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  border-radius: 4px;
 }
 
 .delete-btn {
