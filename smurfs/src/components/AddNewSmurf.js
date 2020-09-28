@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import { addNewSmurf } from "../actions"
 
 const AddNewSmurf = (props) => {
+
     const [smurf, setSmurf] = useState({
         name: "",
         age: "",
         height: "",
-        id: 12345
     })
 
   const handleChanges = (e) => {
@@ -20,6 +20,11 @@ const AddNewSmurf = (props) => {
   const handleNewSmurf = (e) => {
         e.preventDefault();
         props.addNewSmurf(smurf);
+        setSmurf({
+          name: "",
+          age: "",
+          height: "",
+        })
       };
     
         return (

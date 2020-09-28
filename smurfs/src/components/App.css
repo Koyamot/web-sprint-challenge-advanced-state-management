@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
 }
@@ -12,8 +12,33 @@ input {
   width: 148px;
   border-radius: 4px;
   border: 1px solid darkgray;
+  margin-top: 16px;
+  margin-left: 8px;
 }
 
 button{
   width: 148px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+
+.smurfCard {
+  width: 150px;
+  height: 150px;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  padding: 16px;
+  margin: 8px;
+  border-radius: 4px;
+}
+
+.smurfContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.delete-btn {
+  margin-top: 0;
 }

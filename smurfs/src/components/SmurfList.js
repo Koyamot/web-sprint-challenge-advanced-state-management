@@ -4,21 +4,28 @@ import { fetchSmurfs } from '../actions'
 
 import Smurfs from "./Smurfs"
 
-const SmurfList = props => {
+function SmurfList(props) {
+    console.log('ko: Smurflist: props1: ', props)
+
     useEffect(() => {
         props.fetchSmurfs();
-    }, []);
+      }, [])
+
+    
 
     return (
         <div>
-            {props.smurfs.map(smurf => (
-                <Smurfs key={smurf.id} smurf={smurf} />
-            ))}
+            <h2>Smurf List</h2>
+            <div className="smurfContainer">
+            {props.smurfs.map(smurf => {
+                return <Smurfs smurf={smurf} key={smurf.id}/>                 
+            })}
+            </div>
         </div>
     )
 }
 
-const mapSateToProps = state => {
+const mapSateToProps = (state) => {
     return{
         smurfs: state.smurfs,
         isLoading: state.isLoading,
