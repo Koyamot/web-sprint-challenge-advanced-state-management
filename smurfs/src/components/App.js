@@ -11,9 +11,9 @@ const App = (props) => {
   return (
     <div className="App">
       <h1>Smurf Database</h1>
-      <h2>Contribute, or dont... doesnt matter.</h2>
+      <h2>Contribute, or don't... it don't matter</h2>
     <AddNewSmurf  />
-    <SmurfList />
+    <SmurfList /> 
 
     </div>
   )
